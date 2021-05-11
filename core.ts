@@ -40,3 +40,20 @@ const Person: {
   name: "Mike",
   age: 30,
 };
+
+// array
+
+let names: string[] = ["Mike", "Kai"];
+// here names is array of string type
+// we can not assign just string to this variable
+// names = 'Mike' // Error
+let numbers: Array<number>; // we can write array type this way.
+numbers = [1, 3, 2];
+
+// this is type alias
+type ArrayProps = number | string | boolean;
+
+// we can now store mix type like number, string, boolean in this array
+let mixArray: Array<ArrayProps>;
+
+mixArray = ["Mike", 20, true, "Kai", false, 25];
